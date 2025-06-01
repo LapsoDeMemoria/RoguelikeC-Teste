@@ -2,7 +2,7 @@ namespace Game
 {
     public class Mapa
     {
-        protected const int LARGURA = 40; // Largura do mapa
+        protected const int LARGURA = 60; // Largura do mapa
         protected const int ALTURA = 40; // Altura do mapa
         protected int quantidadeSalas { get; set; } // Quantidade de salas no mapa
         public List<List<Tiles>> Layout = new List<List<Tiles>>(); // Layout do mapa, representado por uma lista de tiles
@@ -50,7 +50,7 @@ namespace Game
                 }
                 sala.Add(linha); // Adiciona a linha à sala
             }
-            sala[height / 2][width / 2] = new CentroSala(); // Define o centro da sala com um tile especial
+            sala[(int)height / 2][(int)width / 2] = new CentroSala(); // Define o centro da sala com um tile especial
             return sala; // Retorna a sala gerada
         }
         public void adicionarSala(int x, int y, List<List<Tiles>> sala) // Método para adicionar uma sala ao mapa em uma posição específica
@@ -73,21 +73,21 @@ namespace Game
         {
             for (int i = 0; i < sala.Count; i++) // Percorre cada linha da sala
             {
-            for (int j = 0; j < sala[i].Count; j++) // Percorre cada tile na linha
-            {
-                int posY = y + i; // Calcula a posição Y no mapa
-                int posX = x + j; // Calcula a posição X no mapa
-
-                if (posY >= ALTURA || posX >= LARGURA || posY < 0 || posX < 0) // Verifica se está fora dos limites do mapa
+                for (int j = 0; j < sala[i].Count; j++) // Percorre cada tile na linha
                 {
-                return true; // Retorna verdadeiro se estiver fora dos limites
-                }
+                    int posY = y + i; // Calcula a posição Y no mapa
+                    int posX = x + j; // Calcula a posição X no mapa
 
-                if (this.Layout[posY][posX] is not Parede) // Verifica se o tile no mapa não é uma parede
-                {
-                return true; // Retorna verdadeiro se houver overlap
+                    if (posY >= ALTURA || posX >= LARGURA || posY < 0 || posX < 0) // Verifica se está fora dos limites do mapa
+                    {
+                    return true; // Retorna verdadeiro se estiver fora dos limites
+                    }
+
+                    if (this.Layout[posY][posX] is not Parede) // Verifica se o tile no mapa não é uma parede
+                    {
+                    return true; // Retorna verdadeiro se houver overlap
+                    }
                 }
-            }
             }
             return false; // Retorna falso se não houver overlap
         }
@@ -95,6 +95,10 @@ namespace Game
 
         public void gerarMapa() // Método para gerar o mapa
         {
+            const int  larguraMinima = 3; // Largura mínima da sala
+            const int alturaMinima = 3; // Altura mínima da sala
+            const int larguraMaxima = 15; // Largura máxima da sala
+            const int alturaMaxima = 15; // Altura máxima da sala
             List<int> coordenadaSalasX = new List<int>(); // Lista para armazenar as coordenadas das salas
             List<int> coordenadaSalasY = new List<int>();
             List<int> larguraSalas = new List<int>(); // Lista para armazenar as larguras das salas
@@ -104,8 +108,8 @@ namespace Game
             Random random = new Random(); // Cria uma instância de Random para gerar números aleatórios
             for (int i = 0; i < quantidadeSalas; i++) // Percorre a quantidade de salas a serem geradas
             {
-                int larguraSala = random.Next(5, 10); // Largura aleatória da sala entre 5 e 10
-                int alturaSala = random.Next(5, 10); // Altura aleatória da sala entre 5 e 10
+                int larguraSala = random.Next(larguraMinima, larguraMaxima); // Largura aleatória da sala entre 5 e 10
+                int alturaSala = random.Next(alturaMinima, alturaMaxima); // Altura aleatória da sala entre 5 e 10
                 int posX = random.Next(1, LARGURA - larguraSala - 1); // Posição X aleatória dentro dos limites do mapa
                 int posY = random.Next(1, ALTURA - alturaSala - 1); // Posição Y aleatória dentro dos limites do mapa
                 coordenadaSalasX.Add(posX); // Adiciona a posição X à lista de coordenadas
@@ -119,13 +123,26 @@ namespace Game
                 }
                  // Adiciona a sala ao mapa na posição especificada
                 salas.Add(sala); // Adiciona a sala à lista de salas
-                if (i > 0) // Se não for a primeira sala, conecta com a sala anterior
+                if (i > 0 && i< quantidadeSalas) // Se não for a primeira sala, conecta com a sala anterior
                 {
                     int posXAnterior = random.Next(1, LARGURA - larguraSala - 1); // Posição X aleatória para a conexão
                     int posYAnterior = random.Next(1, ALTURA - alturaSala - 1); // Posição Y aleatória para a conexão
                     conectarSalas(coordenadaSalasX[i - 1] + (int)larguraSalas[i - 1] / 2, coordenadaSalasY[i - 1] + (int)alturaSalas[i - 1] / 2, posX + larguraSala / 2, posY + (int)alturaSala / 2); // Conecta as salas
                 }
             }
+        }
+        public void colocarJogador(Entidades jogador, List<List<Tiles>> mapa) // Método para colocar o jogador no mapa
+        {
+            Random random = new Random(); // Cria uma instância de Random para gerar números aleatórios
+            jogador.posX = random.Next(1, LARGURA - 1); // Posição X aleatória dentro dos limites do mapa
+            jogador.posY = random.Next(1, ALTURA - 1); // Posição Y aleatória dentro dos limites do mapa
+            while (mapa[jogador.posY][jogador.posX] is not Piso) // Enquanto o tile na posição não for piso
+            {
+                jogador.posX = random.Next(1, LARGURA - 1); // Gera uma nova posição X
+                jogador.posY = random.Next(1, ALTURA - 1); // Gera uma nova posição Y
+            }
+            mapa[jogador.posY][jogador.posX] = jogador.Caractere; // Coloca o tile do jogador no mapa na posição especificada
+
         }
 
 

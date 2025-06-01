@@ -1,0 +1,28 @@
+C:\Users\PC\Desktop\Coisas que eu faço\Roguelike Python Tentativa 2\RoguelikeC#\bin\Debug\net9.0\RoguelikeC#.exe
+C:\Users\PC\Desktop\Coisas que eu faço\Roguelike Python Tentativa 2\RoguelikeC#\bin\Debug\net9.0\RoguelikeC#.deps.json
+C:\Users\PC\Desktop\Coisas que eu faço\Roguelike Python Tentativa 2\RoguelikeC#\bin\Debug\net9.0\RoguelikeC#.runtimeconfig.json
+C:\Users\PC\Desktop\Coisas que eu faço\Roguelike Python Tentativa 2\RoguelikeC#\bin\Debug\net9.0\RoguelikeC#.dll
+C:\Users\PC\Desktop\Coisas que eu faço\Roguelike Python Tentativa 2\RoguelikeC#\bin\Debug\net9.0\RoguelikeC#.pdb
+C:\Users\PC\Desktop\Coisas que eu faço\Roguelike Python Tentativa 2\RoguelikeC#\obj\Debug\net9.0\RoguelikeC#.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\PC\Desktop\Coisas que eu faço\Roguelike Python Tentativa 2\RoguelikeC#\obj\Debug\net9.0\RoguelikeC#.AssemblyInfoInputs.cache
+C:\Users\PC\Desktop\Coisas que eu faço\Roguelike Python Tentativa 2\RoguelikeC#\obj\Debug\net9.0\RoguelikeC#.AssemblyInfo.cs
+C:\Users\PC\Desktop\Coisas que eu faço\Roguelike Python Tentativa 2\RoguelikeC#\obj\Debug\net9.0\RoguelikeC#.csproj.CoreCompileInputs.cache
+C:\Users\PC\Desktop\Coisas que eu faço\Roguelike Python Tentativa 2\RoguelikeC#\obj\Debug\net9.0\RoguelikeC#.dll
+C:\Users\PC\Desktop\Coisas que eu faço\Roguelike Python Tentativa 2\RoguelikeC#\obj\Debug\net9.0\refint\RoguelikeC#.dll
+C:\Users\PC\Desktop\Coisas que eu faço\Roguelike Python Tentativa 2\RoguelikeC#\obj\Debug\net9.0\RoguelikeC#.pdb
+C:\Users\PC\Desktop\Coisas que eu faço\Roguelike Python Tentativa 2\RoguelikeC#\obj\Debug\net9.0\RoguelikeC#.genruntimeconfig.cache
+C:\Users\PC\Desktop\Coisas que eu faço\Roguelike Python Tentativa 2\RoguelikeC#\obj\Debug\net9.0\ref\RoguelikeC#.dll
+C:\Users\PC\Desktop\Coisas que eu faço\Roguelike C# 2\RoguelikeC#\bin\Debug\net9.0\RoguelikeC#.exe
+C:\Users\PC\Desktop\Coisas que eu faço\Roguelike C# 2\RoguelikeC#\bin\Debug\net9.0\RoguelikeC#.deps.json
+C:\Users\PC\Desktop\Coisas que eu faço\Roguelike C# 2\RoguelikeC#\bin\Debug\net9.0\RoguelikeC#.runtimeconfig.json
+C:\Users\PC\Desktop\Coisas que eu faço\Roguelike C# 2\RoguelikeC#\bin\Debug\net9.0\RoguelikeC#.dll
+C:\Users\PC\Desktop\Coisas que eu faço\Roguelike C# 2\RoguelikeC#\bin\Debug\net9.0\RoguelikeC#.pdb
+C:\Users\PC\Desktop\Coisas que eu faço\Roguelike C# 2\RoguelikeC#\obj\Debug\net9.0\RoguelikeC#.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\PC\Desktop\Coisas que eu faço\Roguelike C# 2\RoguelikeC#\obj\Debug\net9.0\RoguelikeC#.AssemblyInfoInputs.cache
+C:\Users\PC\Desktop\Coisas que eu faço\Roguelike C# 2\RoguelikeC#\obj\Debug\net9.0\RoguelikeC#.AssemblyInfo.cs
+C:\Users\PC\Desktop\Coisas que eu faço\Roguelike C# 2\RoguelikeC#\obj\Debug\net9.0\RoguelikeC#.csproj.CoreCompileInputs.cache
+C:\Users\PC\Desktop\Coisas que eu faço\Roguelike C# 2\RoguelikeC#\obj\Debug\net9.0\RoguelikeC#.dll
+C:\Users\PC\Desktop\Coisas que eu faço\Roguelike C# 2\RoguelikeC#\obj\Debug\net9.0\refint\RoguelikeC#.dll
+C:\Users\PC\Desktop\Coisas que eu faço\Roguelike C# 2\RoguelikeC#\obj\Debug\net9.0\RoguelikeC#.pdb
+C:\Users\PC\Desktop\Coisas que eu faço\Roguelike C# 2\RoguelikeC#\obj\Debug\net9.0\RoguelikeC#.genruntimeconfig.cache
+C:\Users\PC\Desktop\Coisas que eu faço\Roguelike C# 2\RoguelikeC#\obj\Debug\net9.0\ref\RoguelikeC#.dll

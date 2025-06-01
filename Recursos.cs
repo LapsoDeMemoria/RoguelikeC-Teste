@@ -3,6 +3,13 @@ using System.Runtime.InteropServices;
 
 namespace Recursos
 {
+    public class Tick()
+    {
+        public static void tick(double delay = 0.01)
+        {
+            System.Threading.Thread.Sleep((int)(delay * 1000)); // Pausa a execução por um tempo especificado em segundos
+        }
+    }
     public class Cor
     {
         public const string RESET = "\x1b[0m";
@@ -46,7 +53,7 @@ namespace Recursos
             Console.SetCursorPosition(coluna, linha); // Muda a posição do cursor para a linha e coluna especificadas
         }
 
-        public static void log(string msg, string cor, double delay = 0.01, bool nova_linha = true, bool limpar_terminal = false)
+        public static void logBoxLog(string msg, string cor, double delay = 0.01, bool nova_linha = true, bool limpar_terminal = false)
         {
             logBox.Add(msg); // Adiciona a mensagem ao logBox
             if (logBox.Count > 10)
@@ -69,6 +76,29 @@ namespace Recursos
                     Console.WriteLine();
                 }
 
+
+                if (nova_linha)
+                    Console.WriteLine();
+            }
+            else
+            {
+                Console.WriteLine("Seu terminal não suporta ANSI.");
+            }
+        }
+public static void log(string msg, string cor, double delay = 0.01, bool nova_linha = true, bool limpar_terminal = false)
+        {
+            if (HabilitarCoresANSI())
+            {
+                if (limpar_terminal)
+                {
+                    Console.Clear();
+                }
+                foreach (char c in msg)
+                {
+                    Console.Write($"{cor}{c}{Cor.RESET}");
+                    System.Threading.Thread.Sleep((int)(delay * 1000));
+                }
+                
 
                 if (nova_linha)
                     Console.WriteLine();
