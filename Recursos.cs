@@ -17,6 +17,48 @@ namespace Recursos
         public const string ALERTA = "\x1b[93m";
         public const string ERRO = "\x1b[91m";
         public const string PADRAO = "\x1b[0m";
+        public const string SUCESSO = "\x1b[92m";
+        public const string DEBUG = "\x1b[95m";
+        public const string NEGRITO = "\x1b[1m";
+        public const string SUBLINHADO = "\x1b[4m";
+        public const string PRETO = "\x1b[30m";
+        public const string VERMELHO = "\x1b[31m";
+        public const string VERDE = "\x1b[32m";
+        public const string AMARELO = "\x1b[33m";
+        public const string AZUL = "\x1b[34m";
+        public const string MAGENTA = "\x1b[35m";
+        public const string CIANO = "\x1b[36m";
+        public const string BRANCO = "\x1b[37m";
+    }
+
+    public class CorFundo
+    {
+        public const string RESET = "\x1b[0m";
+        public const string PRETO = "\x1b[40m";
+        public const string VERMELHO = "\x1b[41m";
+        public const string VERDE = "\x1b[42m";
+        public const string AMARELO = "\x1b[43m";
+        public const string AZUL = "\x1b[44m";
+        public const string MAGENTA = "\x1b[45m";
+        public const string CIANO = "\x1b[46m";
+        public const string BRANCO = "\x1b[47m";
+        public const string CINZA_CLARO = "\x1b[47;1m";
+        public const string CINZA_ESCURO = "\x1b[40;1m";
+        public const string VERMELHO_CLARO = "\x1b[41;1m";
+        public const string VERDE_CLARO = "\x1b[42;1m";
+        public const string AMARELO_CLARO = "\x1b[43;1m";
+        public const string AZUL_CLARO = "\x1b[44;1m";
+        public const string MAGENTA_CLARO = "\x1b[45;1m";
+        public const string CIANO_CLARO = "\x1b[46;1m";
+
+        // Tons mais escuros
+        public const string VERMELHO_ESCURO = "\x1b[41;2m";
+        public const string VERDE_ESCURO = "\x1b[42;2m";
+        public const string AMARELO_ESCURO = "\x1b[43;2m";
+        public const string AZUL_ESCURO = "\x1b[44;2m";
+        public const string MAGENTA_ESCURO = "\x1b[45;2m";
+        public const string CIANO_ESCURO = "\x1b[46;2m";
+        public const string CINZA_MUITO_ESCURO = "\x1b[40;2m";
     }
 
     public class Log

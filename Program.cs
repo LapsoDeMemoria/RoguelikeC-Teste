@@ -39,11 +39,11 @@ public class Program
         Console.CursorVisible = false; // Oculta o cursor do terminal para uma melhor visualização do jogo
         while (true) // Loop principal do jogo
         {
-            Console.SetCursorPosition(0, 0);
+            Log.cursorTop();
             Log.log(programInstance.Jogador.ToString(), cor: Cor.INFO, delay: 0.00, limpar_terminal: false); // Exibe as informações do jogador no terminal
             mapa.exibirMapa(); // Exibe o mapa no terminal
             programInstance.Jogador.detectarMovimentoTecla(mapa.Layout); // Detecta o movimento do jogador com base nas teclas pressionadas
-
+            Recursos.Tick.tick();
         }
 
     }

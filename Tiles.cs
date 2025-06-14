@@ -1,3 +1,4 @@
+using Recursos;
 namespace Game
 {
     public class Tiles
@@ -14,14 +15,14 @@ namespace Game
     }
     public class Parede : Tiles
     {
-        public Parede(string nome = "Parede", string caractere = "# ") : base(nome, caractere, true)
+        public Parede(string nome = "Parede", string caractere = $"{Cor.AMARELO}{CorFundo.AMARELO_ESCURO}# {CorFundo.RESET}{Cor.RESET}") : base(nome, caractere, true)
         {
             // Inicializa o tile de parede com nome e caractere padrão
         }
     }
     public class Piso : Tiles
     {
-        public Piso(string nome = "Piso", string caractere = ". ") : base(nome, caractere, false)
+        public Piso(string nome = "Piso", string caractere = $"{Cor.VERDE}{CorFundo.VERDE_ESCURO}. {CorFundo.RESET}{Cor.RESET}") : base(nome, caractere, false)
         {
             // Inicializa o tile de piso com nome e caractere padrão
         }
